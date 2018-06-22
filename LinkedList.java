@@ -32,26 +32,47 @@ public class LinkedList {
         count += 1;
     }
 
-    public void removeNode() {
-        Node current = head;
+    public void removeNode(int index){
 
-        if(current == null) {
-            System.out.println("no Nodes to remove, empty Linked List");
-            return;
-        }
-
-        else if(getCount() == 1) {
-            System.out.println("only one Node in Linked List, deleting Node");
-            this.head = null;
+        if(isEmpty() || index >= count) System.out.println("Nilai index diluar batas");
+            if(index == 0){
+                Node prev = head;
+                Node cur = head.next; 
+                prev = cur;
+                cur = prev.next;
+            } 
+            else{
+                Node prev = head;
+                Node cur = head.next;
+                for(int i = 1; i < index; i++){
+                    prev = cur;
+                    cur = prev.next;
+                }
+                prev.next = cur.next;
+            }
             count--;
-            return;
-        }
 
-        while(current.getNext().getNext() != null) {
-            current = current.getNext();
-        }
-        current.setNext(null);
-        count--;
+
+
+        // Node current = head;
+
+        // if(current == null) {
+        //     System.out.println("linkedlist kosong!");
+        //     return;
+        // }
+
+        // else if(getCount() == 1) {
+        //     System.out.println("only one Node in Linked List, deleting Node");
+        //     this.head = null;
+        //     count--;
+        //     return;
+        // }
+
+        // while(current.getNext().getNext() != null) {
+        //     current = current.getNext();
+        // }
+        // current.setNext(null);
+        // count--;
     }
 
     public int getCount() {
@@ -82,6 +103,7 @@ public class LinkedList {
 
         current.setValue(value);
     }
+
 
     public Siswa getByNo(int no) {
         Node current = head;
