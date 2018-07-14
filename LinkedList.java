@@ -119,6 +119,24 @@ public class LinkedList {
         return current.getValue();
     }
 
+    public Siswa getNama(int index){
+        Node current = head;
+
+        for(int i = 0; i< index; i++){
+            current = current.next;
+        }
+
+        // while(current.getNext() != null){
+        //     if (current.getValue() == index) {
+               
+        //         break;
+        //     }
+        //     current.getNext();
+        // }
+         return current.getValue();
+
+    }
+
     public Siswa getByNim(int nim) {
         Node current = head;
 
