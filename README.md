@@ -1,3 +1,3 @@
-absensi-siswa
+absensi-mahasiswa
 
-aplikasi untuk absensi siswa
+aplikasi ini digunakan untuk absensi siswa. 
