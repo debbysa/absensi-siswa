@@ -1,6 +1,4 @@
 absensi-siswa
 
 aplikasi untuk absensi siswa
-
-Aplikasi Ini berbasis WebService
-
+merupakan aplikasi berbasis desktop dengan menggunakan bahasa pemrograman java
